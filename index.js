@@ -18,7 +18,7 @@ function displayBooks() {
 
   bookCollection.forEach((book, index) => {
     const bookDiv = document.createElement('div');
-    bookDiv.classList.add('book-details')
+    bookDiv.classList.add('book-details');
     bookDiv.innerHTML = `
 
       <strong>${book.title}</strong> By: ${book.author}
@@ -30,7 +30,6 @@ function displayBooks() {
     removeBtn.classList.add('remove-btn');
     removeBtn.textContent = 'Remove';
     removeBtn.addEventListener('click', () => removeBook(index));
-   
 
     bookDiv.appendChild(removeBtn);
     bookListDiv.appendChild(bookDiv);

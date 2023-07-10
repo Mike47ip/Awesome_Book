@@ -1,44 +1,49 @@
-*{
-    margin: o;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-.books-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.book-collections {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-    justify-content: center;
-}
-.book-collections h1{
-    font-weight: 600;
-    font-size: 2.2rem;
-}
-.book-details{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    border-bottom:  1px solid black;
-    padding-block: 1rem;
-    width:15rem;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
+.books-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-collections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.book-collections h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid black;
+  padding-block: 1rem;
+  width: 15rem;
+}
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
+
 .remove-btn {
-    width: max-content;
+  width: max-content;
 }
-.form-btn{
-    width: max-content;
+
+.form-btn {
+  width: max-content;
 }
