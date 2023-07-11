@@ -18,11 +18,19 @@ function displayBooks() {
 
   bookCollection.forEach((book, index) => {
     const bookDiv = document.createElement('div');
-    bookDiv.innerHTML = `<strong>${book.title}</strong> by ${book.author}`;
+    bookDiv.classList.add('book-details')
+    bookDiv.innerHTML = `
 
+      <strong>${book.title}</strong> By: ${book.author}
+    
+    `;
+
+    // Event listener for the remove button
     const removeBtn = document.createElement('button');
+    removeBtn.classList.add('remove-btn');
     removeBtn.textContent = 'Remove';
     removeBtn.addEventListener('click', () => removeBook(index));
+   
 
     bookDiv.appendChild(removeBtn);
     bookListDiv.appendChild(bookDiv);
