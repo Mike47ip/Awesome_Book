@@ -6,10 +6,77 @@
   box-sizing: border-box;
 }
 
+.main-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* <==========Header Section ===========> */
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 2rem;
+  gap: 1rem;
+  position: fixed;
+
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 2px solid rgb(67, 64, 64);
+  border-radius: 5px;
+}
+
+.logo a {
+  color:rgb(11, 11, 11);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.logo a:hover {
+  color: blue;
+}
+
+.navLinks {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navLinks li {
+  padding: 0.5rem;
+}
+
+.navLinks li:nth-child(1), 
+.navLinks li:nth-child(2) {
+  border-right: 1px solid rgb(121, 118, 118);
+}
+
+.navLinks li a{
+  color:rgb(11, 11, 11);
+  
+}
+
+.date-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* <==========Header End ===========> */
+
 .books-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 6rem;
+  height: 100%;
 }
 
 .book-collections {
@@ -39,8 +106,16 @@
   flex-direction: column;
 }
 
+.books-content-top {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
 #bookList {
-  width: 90%;
+  /* width: 90%; */
   border: 2px solid black;
   border-radius: 5px;
   display: flex;
@@ -84,18 +159,91 @@ form {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  
 }
 
 .remove-btn {
   width: 70px;
   padding: 5px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
 .form-btn {
   width: 70px;
   padding: 5px;
+  box-shadow: 10px 10px 8px #888888;
 }
 
 #bookList .book-details:nth-child(odd) {
   background: rgb(170, 165, 165);
+}
+/* <==========Contact Section ===========> */
+.contact-container {
+  display: none;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-details {
+  padding-left: 3rem;
+}
+.contact-details li {
+  list-style: circle;
+  
+}
+/* <==========Footer Section ===========> */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  
+  
+  
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 2px solid rgb(67, 64, 64);
+  border-radius: 5px;
+}
+
+.clicked {
+  color: red !important;
+}
+
+.clicked2 {
+  color: red !important;
+}
+
+.clicked3 {
+  color: red !important;
+}
+
+.more {
+  display: flex;
+}
+
+.less {
+  display: none;
+}
+
+.remove {
+  display: none;
+}
+
+.add {
+  display: flex;
 }
