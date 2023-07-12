@@ -121,6 +121,7 @@ To run the project, execute the following command:
 👤 **Enoch Bett**
 
 - GitHub: [@Mike47ip](https://github.com/Mike47ip)
+- GitHub: [@bettenoch](https://github.com/Bettenoch)
 
 <!-- FUTURE FEATURES -->
 
