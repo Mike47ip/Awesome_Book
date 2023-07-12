@@ -106,3 +106,6 @@ contactLink.addEventListener('click', () => {
   contactPage.classList.add('add');
   formPage.classList.add('remove');
 });
+
+const dateTime = document.querySelector('.date-time');
+dateTime.innerHTML = new Date().toString().slice(0, 34);
