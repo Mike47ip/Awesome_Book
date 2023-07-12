@@ -38,6 +38,10 @@ header {
   font-weight: 600;
 }
 
+.navLinks li a {
+  color: rgb(11, 11, 11);
+}
+
 .logo a:hover {
   color: blue;
 }
@@ -53,13 +57,13 @@ header {
   padding: 0.5rem;
 }
 
+.contact-details li {
+  list-style: circle;
+}
+
 .navLinks li:nth-child(1),
 .navLinks li:nth-child(2) {
   border-right: 1px solid rgb(121, 118, 118);
-}
-
-.navLinks li a {
-  color: rgb(11, 11, 11);
 }
 
 .date-time {
@@ -194,10 +198,6 @@ form {
 
 .contact-details {
   padding-left: 3rem;
-}
-
-.contact-details li {
-  list-style: circle;
 }
 
 /* <==========Footer Section ===========> */
