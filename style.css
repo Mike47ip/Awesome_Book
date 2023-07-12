@@ -18,20 +18,51 @@
   gap: 1.5rem;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
+  padding: 2rem
 }
 
 .book-collections h1 {
   font-weight: 600;
   font-size: 2.2rem;
+  
+}
+
+.book-collections .heading{
+    text-align: center;
+}
+
+.books-content{
+    width: 100%;
+}
+
+#bookList{
+    width:90%;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    
 }
 
 .book-details {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+
   gap: 1rem;
-  border-bottom: 1px solid black;
-  padding-block: 1rem;
-  width: 15rem;
+
+  padding: 1rem;
+  
+}
+
+.form-container {
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
 }
 
 form {
@@ -40,10 +71,20 @@ form {
   gap: 0.5rem;
 }
 
+.btn-holder{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 .remove-btn {
   width: max-content;
 }
 
 .form-btn {
   width: max-content;
+}
+
+#bookList .book-details:nth-child(odd){
+    background: rgb(170, 165, 165);
 }
