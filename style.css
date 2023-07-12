@@ -76,7 +76,7 @@ header {
   align-items: center;
   justify-content: center;
   padding-top: 6rem;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .book-collections {
@@ -111,6 +111,7 @@ header {
   display: none;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 4rem;
   
 }
 
@@ -120,13 +121,15 @@ header {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: auto;
 }
 
 .book-details {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .form-container {

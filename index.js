@@ -11,7 +11,9 @@ class BookCollection {
       const bookDiv = document.createElement('div');
       bookDiv.classList.add('book-details');
       bookDiv.innerHTML = `
+        <div>
         <strong>${book.title}</strong> By: ${book.author}
+        </div>
       `;
 
       const removeBtn = document.createElement('button');
