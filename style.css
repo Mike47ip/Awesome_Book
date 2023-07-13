@@ -18,6 +18,8 @@
   gap: 1.5rem;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
+  padding: 2rem;
 }
 
 .book-collections h1 {
@@ -25,13 +27,39 @@
   font-size: 2.2rem;
 }
 
-.book-details {
+.book-collections .heading {
+  text-align: center;
+}
+
+.books-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bookList {
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid black;
-  padding-block: 1rem;
-  width: 15rem;
+  padding: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
 }
 
 form {
@@ -40,10 +68,34 @@ form {
   gap: 0.5rem;
 }
 
+#addBookForm {
+  width: 360px;
+}
+
+#title {
+  height: 35px;
+}
+
+#author {
+  height: 35px;
+}
+
+.btn-holder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 .remove-btn {
-  width: max-content;
+  width: 70px;
+  padding: 5px;
 }
 
 .form-btn {
-  width: max-content;
+  width: 70px;
+  padding: 5px;
+}
+
+#bookList .book-details:nth-child(odd) {
+  background: rgb(170, 165, 165);
 }

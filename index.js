@@ -1,73 +1,67 @@
-// Retrieve book collection from localStorage or create a new one
-let bookCollection = JSON.parse(localStorage.getItem('bookCollection')) || [];
-
-// Function to display all books in the collection
-function displayBooks() {
-  const bookListDiv = document.getElementById('bookList');
-  bookListDiv.innerHTML = '';
-
-  // Function to remove a book from the collection
-  function removeBook(index) {
-    bookCollection = bookCollection.filter((_, i) => i !== index);
-
-    // Save the updated book collection to localStorage
-    localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
-
-    displayBooks();
+class BookCollection {
+  constructor() {
+    this.books = JSON.parse(localStorage.getItem('bookCollection')) || [];
   }
 
-  bookCollection.forEach((book, index) => {
-    const bookDiv = document.createElement('div');
-    bookDiv.classList.add('book-details');
-    bookDiv.innerHTML = `
+  displayBooks() {
+    const bookListDiv = document.getElementById('bookList');
+    bookListDiv.innerHTML = '';
 
-      <strong>${book.title}</strong> By: ${book.author}
-    
-    `;
+    this.books.forEach((book, index) => {
+      const bookDiv = document.createElement('div');
+      bookDiv.classList.add('book-details');
+      bookDiv.innerHTML = `
+        <strong>${book.title}</strong> By: ${book.author}
+      `;
 
-    // Event listener for the remove button
-    const removeBtn = document.createElement('button');
-    removeBtn.classList.add('remove-btn');
-    removeBtn.textContent = 'Remove';
-    removeBtn.addEventListener('click', () => removeBook(index));
+      const removeBtn = document.createElement('button');
+      removeBtn.classList.add('remove-btn');
+      removeBtn.textContent = 'Remove';
+      removeBtn.addEventListener('click', () => this.removeBook(index));
 
-    bookDiv.appendChild(removeBtn);
-    bookListDiv.appendChild(bookDiv);
-  });
-}
+      bookDiv.appendChild(removeBtn);
+      bookListDiv.appendChild(bookDiv);
+    });
+  }
 
-// Function to add a new book to the collection
-function addBook(event) {
-  event.preventDefault();
+  addBook(event) {
+    event.preventDefault();
 
-  const titleInput = document.getElementById('title');
-  const authorInput = document.getElementById('author');
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
 
-  const title = titleInput.value;
-  const author = authorInput.value;
+    const title = titleInput.value;
+    const author = authorInput.value;
 
-  if (title && author) {
-    const newBook = {
-      title,
-      author,
-    };
+    if (title && author) {
+      const newBook = {
+        title,
+        author,
+      };
 
-    bookCollection.push(newBook);
+      this.books.push(newBook);
 
-    // Save the updated book collection to localStorage
-    localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
+      localStorage.setItem('bookCollection', JSON.stringify(this.books));
 
-    // Reset input fields
-    titleInput.value = '';
-    authorInput.value = '';
+      titleInput.value = '';
+      authorInput.value = '';
 
-    displayBooks();
+      this.displayBooks();
+    }
+  }
+
+  removeBook(index) {
+    this.books.splice(index, 1);
+
+    localStorage.setItem('bookCollection', JSON.stringify(this.books));
+
+    this.displayBooks();
   }
 }
 
-// Event listener for form submission
+const bookCollection = new BookCollection();
+
 const addBookForm = document.getElementById('addBookForm');
-addBookForm.addEventListener('submit', addBook);
+addBookForm.addEventListener('submit', (event) => bookCollection.addBook(event));
 
-// Display the books initially
-displayBooks();
+bookCollection.displayBooks();
