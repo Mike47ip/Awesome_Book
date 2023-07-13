@@ -78,8 +78,6 @@ header {
   align-items: center;
   justify-content: center;
   padding-top: 6rem;
-
-  /* height: 100%; */
 }
 
 .book-collections {
@@ -118,7 +116,6 @@ header {
 }
 
 #bookList {
-  /* width: 90%; */
   border: 2px solid black;
   border-radius: 5px;
   display: flex;
