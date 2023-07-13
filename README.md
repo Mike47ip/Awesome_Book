@@ -113,9 +113,11 @@ To run the project, execute the following command:
 
 👤 **Michael Darkwah**
 👤 **Enoch Bett**
+👤 **Uzair Manzoor**
 
 - GitHub: [@Mike47ip](https://github.com/Mike47ip)
 - GitHub: [@bettenoch](https://github.com/Bettenoch)
+- GitHub: [@Uzair-Manzoor](https://github.com/Uzair-Manzoor)
 
 <!-- FUTURE FEATURES -->
 
