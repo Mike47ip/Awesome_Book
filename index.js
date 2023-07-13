@@ -95,7 +95,7 @@ addLink.addEventListener('click', () => {
   contactLink.classList.remove('clicked3');
   awesomeBooks.classList.remove('more');
   contactPage.classList.remove('add');
-  formPage.classList.remove('less');
+  formPage.classList.remove('less', 'remove');
 });
 
 contactLink.addEventListener('click', () => {
