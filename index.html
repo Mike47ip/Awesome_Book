@@ -7,34 +7,87 @@
   <link rel="stylesheet" href="style.css">
  </head>
  <body>
-  <section class="books-container">
-   <main class="book-collections">
-    <article class="books-content">
-        <div class="heading">
-            <h1>Awesome Books</h1>
-        </div>
-    
-        <div id="bookList">
+    <section class="main-container">
+        <header>
+            <nav class="header-container">
+                <article class="logo">
+                    <a href="#" class="logo-name">Awesome Books</a>
+                </article>
+                <ul class="navLinks">
+                    <li> <a href="#" id="Main-Link">List</a></li>
+                    <li> <a href="#"  id="Add-Page-Link">Add Page</a></li>
+                    <li> <a href="#" id="Contact_Link">Contact</a></li>
+                </ul>
+            </nav>
+            <article>
+                <span class="date-time">July 12th 2023 10:43AM</span>
+            </article>
+        </header>
+        <section class="books-container">
+            <main class="book-collections">
+                <article class="books-content">
+                    <article class="books-content-top">
+                        <div class="heading">
+                            <h1>Awesome Books</h1>
+                        </div>
+                    
+                        <div id="bookList">
+                            
+                        </div>
+                    </article>
+                
+                    <div class="form-container">
+                        <h2> Add new Book</h2>
+                        <form id="addBookForm">
+                            <label for="title"></label>
+                            <input type="text" id="title" placeholder="Title" required />
+                            <label for="author"></label>
+                            <input type="text" id="author" placeholder="Author" required />
+                            <div class="btn-holder">
+                                <button type="submit" class="form-btn">Add</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                
+                </article>
             
-        </div>
+            </main>
+        </section>
+      
+        <!-- Contact Section -->
     
-       <div class="form-container">
-        <h2> Add new Book</h2>
-        <form id="addBookForm">
-            <label for="title"></label>
-            <input type="text" id="title" placeholder="Title" required />
-            <label for="author"></label>
-            <input type="text" id="author" placeholder="Author" required />
-            <div class="btn-holder">
-                <button type="submit" class="form-btn">Add</button>
-            </div>
+        <section class="contact-container">
+            <article>
+                <h2>Contact Information</h2>
+            </article>
+            <article class="contact-info">
+                <p>
+                    Do you have any questions or you just want to say "hello" </br>
+                    You can reach out to us!!
+                 </p>
+                 <ul class="contact-details">
+                    <li> 
+                        <p>Our email @webstorebooks.com</p>
+                    </li>
+                    <li>
+                        <p>Our phone : 115167999</p>
+                    </li>
+                    <li>
+                        <p>Our adress, street name: Ghosttown 84502 city London</p>
+                    </li>
+                 </ul>
+            </article>
+        </section>
+        <section class="footer-container">
+            <footer>
+                <span>© Copyright 2023 Awesome Books. All rights reserved.</span>
+            </footer>
             
-        </form>
-       </div>
-    </article>
-   
-   </main>
-  </section>
+        </section>
+       
+    </section>
+    
 
   <script src="index.js"></script>
  </body>

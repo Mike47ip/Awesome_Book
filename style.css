@@ -6,10 +6,78 @@
   box-sizing: border-box;
 }
 
+.main-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* <==========Header Section ===========> */
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 2rem;
+  gap: 1rem;
+  position: fixed;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 2px solid rgb(67, 64, 64);
+  border-radius: 5px;
+}
+
+.logo a {
+  color: rgb(11, 11, 11);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.navLinks li a {
+  color: rgb(11, 11, 11);
+}
+
+.logo a:hover {
+  color: blue;
+}
+
+.navLinks {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navLinks li {
+  padding: 0.5rem;
+}
+
+.contact-details li {
+  list-style: circle;
+}
+
+.navLinks li:nth-child(1),
+.navLinks li:nth-child(2) {
+  border-right: 1px solid rgb(121, 118, 118);
+}
+
+.date-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* <==========Header End ===========> */
+
 .books-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 6rem;
 }
 
 .book-collections {
@@ -39,19 +107,28 @@
   flex-direction: column;
 }
 
+.books-content-top {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
 #bookList {
-  width: 90%;
   border: 2px solid black;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: auto;
 }
 
 .book-details {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .form-container {
@@ -89,13 +166,81 @@ form {
 .remove-btn {
   width: 70px;
   padding: 5px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-btn {
   width: 70px;
   padding: 5px;
+  box-shadow: 10px 10px 8px #888;
 }
 
 #bookList .book-details:nth-child(odd) {
   background: rgb(170, 165, 165);
+}
+
+/* <==========Contact Section ===========> */
+.contact-container {
+  display: none;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-details {
+  padding-left: 3rem;
+}
+
+/* <==========Footer Section ===========> */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 2px solid rgb(67, 64, 64);
+  border-radius: 5px;
+}
+
+.clicked {
+  color: blue !important;
+}
+
+.clicked2 {
+  color: blue !important;
+}
+
+.clicked3 {
+  color: blue !important;
+}
+
+.more {
+  display: flex;
+}
+
+.less {
+  display: none;
+}
+
+.remove {
+  display: none;
+}
+
+.add {
+  display: flex;
 }
